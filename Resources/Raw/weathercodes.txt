@@ -1,0 +1,15 @@
+0: Clear Sky, day0.png, night0.png
+1: Parly Cloud, day1.png, night2.png
+2: Scattered Clouds, day2.png, day2.png
+3: Overcast, day3.png, day3.png
+45, 48: Fog, day45.png, day45.png
+51, 52, 55: Drizzle, day51.png, night51.png
+56, 57: Freezing Drizzle, day56.png, night56.png
+61, 63: Rain, day61.png, night61.png
+65: Heavy Rain, day65.png, night65.png
+66: Freezing Rain, day66.png, night66.png
+67: Heavy Freezing Rain, day67.png, night67.png
+71, 73, 75, 77: Snow, day70.png, day70.png
+80, 81, 82: Rain Showers, day80.png, night80.png
+85, 86: Snow Showers, day85.png, night85.png
+95, 96, 99: Thunderstorm, day95.png, night95.png

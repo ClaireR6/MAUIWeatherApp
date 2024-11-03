@@ -5,9 +5,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using static SmithyApp.DeserializeWeather;
+using static WeatherApp.DeserializeWeather;
 
-namespace SmithyApp
+namespace WeatherApp
 {
     internal class DeserializeLocation
     {

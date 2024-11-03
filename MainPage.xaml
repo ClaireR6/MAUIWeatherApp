@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SmithyApp"
-             x:Class="SmithyApp.MainPage">
+             xmlns:local="clr-namespace:WeatherApp"
+             x:Class="WeatherApp.MainPage"
+             Padding="0"
+             Title="MyWeather">
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
@@ -11,22 +13,22 @@
         </LinearGradientBrush>
     </ContentPage.Background>
  
-    <Grid>
+    <ScrollView>
         <Image Source="nightbackgroundaspect.jpg" Aspect="AspectFill" 
                VerticalOptions="FillAndExpand" 
                HorizontalOptions="FillAndExpand"
                Opacity="0.5"/>
         
         <Grid>
-        <VerticalStackLayout
+            <VerticalStackLayout
             HorizontalOptions="Center"
-            Padding="0,20"
+            Padding="10, 20"
             Spacing="5">
 
-            <Label
+                <Label
                 x:Name="LocationLbl" HorizontalTextAlignment="Center" TextColor="AliceBlue" FontSize="32" FontFamily="Calibri"/>
 
-            <HorizontalStackLayout
+                <HorizontalStackLayout
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
                     <Image x:Name="weatherIcon" Aspect="AspectFit" WidthRequest="75"
@@ -40,28 +42,26 @@
                         <Button x:Name="fBtn" WidthRequest="5" HeightRequest="5" Text="F" Clicked="ToFahrenheit" BackgroundColor="Transparent" FontSize="24" Padding="0"/>
                         <Button x:Name="cBtn" WidthRequest="10" HeightRequest="10" Text="C" Clicked="ToCelsius" BackgroundColor="Transparent" FontSize="24" Padding="0, 0" Opacity="0.5"/>
                     </VerticalStackLayout>
-            </HorizontalStackLayout>
+                </HorizontalStackLayout>
 
-                <CollectionView ItemsSource="{Binding DailyCards}" SelectionMode="Single" SelectionChanged="OnSelectionChanged" HorizontalOptions="FillAndExpand" ItemsLayout="HorizontalList">
+
+                <Label Text="Daily" FontSize="24" TextColor="AliceBlue" FontFamily="Calibri"/>
+                <CollectionView ItemsSource="{Binding DailyCardsViewModel.DailyCards}" SelectionMode="Single" SelectionChanged="OnSelectionChanged" HorizontalOptions="FillAndExpand" ItemsLayout="HorizontalList">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <local:DailyCard/>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <!--<CarouselView ItemsSource="{Binding DailyCards}" IsSwipeEnabled="True" Margin="0" HorizontalOptions="CenterAndExpand">
-                    <CarouselView.ItemsLayout>
-                        <LinearItemsLayout Orientation="Horizontal" SnapPointsAlignment="Start" SnapPointsType="MandatorySingle"/>
-                    </CarouselView.ItemsLayout>
-                    <CarouselView.ItemTemplate>
+                <Label Text="Hourly" FontSize="24" TextColor="AliceBlue" FontFamily="Calibri"/>
+                <CollectionView ItemsSource="{Binding HourlyCardsViewModel.HourlyCards}" SelectionMode="Single" SelectionChanged="OnSelectionChanged" HorizontalOptions="FillAndExpand" ItemsLayout="HorizontalList">
+                    <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout Spacing="10">
-                                <local:DailyCard/>
-                            </StackLayout>
+                            <local:HourlyCard/>
                         </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>-->
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </VerticalStackLayout>
         </Grid>
-    </Grid>
+    </ScrollView>
 </ContentPage>

@@ -5,16 +5,20 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace SmithyApp
+namespace WeatherApp
 {
     internal class DeserializeWeather
     {
-        public class OneCallWeatherResponse
-        {
-            public Current current { get; set; }
-            public List<Daily> daily { get; set; }
-        }
+        /// <summary>
+        /// OneCallWeatherResponse Built for OpenWeather OneCall API call
+        /// </summary>
+        //public class OneCallWeatherResponse
+        //{
+        //    public Current current { get; set; }
+        //    public List<Daily> daily { get; set; }
+        //}
         
+        // Build for OpenWeather forecast API call
         public class CurrentWeatherResponse
         {
             public Main main { get; set; }
@@ -23,26 +27,26 @@ namespace SmithyApp
 
 
 
-        public class Current
-        {
-            public double temp { get; set; }
-            public double feels_like { get; set; }
-            public List<Weather> weather { get; set; }
-        }
+        //public class Current
+        //{
+        //    public double temp { get; set; }
+        //    public double feels_like { get; set; }
+        //    public List<Weather> weather { get; set; }
+        //}
 
-        public class Daily
-        {
-            public int dt { get; set; }
-            public Temp temp { get; set; }
-            public List<Weather> weather { get; set; }
-        }
+        //public class Daily
+        //{
+        //    public int dt { get; set; }
+        //    public Temp temp { get; set; }
+        //    public List<Weather> weather { get; set; }
+        //}
 
-        public class Temp
-        {
-            public double day { get; set; }
-            public double min { get; set; }
-            public double max { get; set; }
-        }
+        //public class Temp
+        //{
+        //    public double day { get; set; }
+        //    public double min { get; set; }
+        //    public double max { get; set; }
+        //}
 
         public class Weather
         {
@@ -65,10 +69,11 @@ namespace SmithyApp
             return WeatherResponse;
         }
 
-        public static OneCallWeatherResponse GetOneCallForecast(string result)
-        {
-            OneCallWeatherResponse? OneCallResponse = JsonSerializer.Deserialize<OneCallWeatherResponse>(result);
-            return OneCallResponse;
-        }
+        // Built to handle OpenWeather OneCall API. No longer in use due to subsription restrictions
+        //public static OneCallWeatherResponse GetOneCallForecast(string result)
+        //{
+        //    OneCallWeatherResponse? OneCallResponse = JsonSerializer.Deserialize<OneCallWeatherResponse>(result);
+        //    return OneCallResponse;
+        //}
     }
 }

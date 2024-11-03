@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmithyApp
+namespace WeatherApp
 {
     internal class DailyCardsViewModel
     {
@@ -14,20 +14,19 @@ namespace SmithyApp
         public Card previous;
         public DailyCardsViewModel()
         {
-            DailyCards = new ObservableCollection<Card>
-            {
-                new Card { Date = "Mon, 15 Oct", Icon = "i01d.png", High = "75°F", Low = "55°F", Weather = "Sunny"},
-                new Card { Date = "Tue, 16 Oct", Icon = "103d.png", High = "78°F", Low = "58°F", Weather = "Cloudy" },
-                new Card { Date = "Wed, 17 Oct", Icon = "i09d.png", High = "72°F", Low = "50°F", Weather = "Rain" }
-            };
+            DailyCards = new ObservableCollection<Card>();
+        }
 
-            if (DailyCards.Any())
+        public void addCard(Card card)
+        {
+            DailyCards.Add(card);
+            if (DailyCards.Count == 1)
             {
-                DailyCards[0].IsSelected = true;
-                previous = DailyCards[0];
+                previous = card;
+                card.IsSelected = true;
             }
         }
-    }
+    }    
 
     public class Card: INotifyPropertyChanged
     {

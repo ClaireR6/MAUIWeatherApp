@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace SmithyApp
+namespace WeatherApp
 {
     public class Program
     {

@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace SmithyApp
+namespace WeatherApp
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

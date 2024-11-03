@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace SmithyApp
+namespace WeatherApp
 {
     public static class MauiProgram
     {

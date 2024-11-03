@@ -1,4 +1,4 @@
-namespace SmithyApp
+namespace WeatherApp
 {
 	public partial class DailyCard : ContentView
 	{

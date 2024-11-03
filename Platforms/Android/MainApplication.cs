@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace SmithyApp
+namespace WeatherApp
 {
     [Application]
     public class MainApplication : MauiApplication
