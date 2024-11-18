@@ -28,7 +28,7 @@
 
 ## Download
 
-You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of My Weather for Windows.
+You can [download](https://github.com/ClaireR6/MAUIWeatherApp/releases/tag/v1.0.0) the latest installable version of My Weather for Windows.
 
 ## Credits
 
