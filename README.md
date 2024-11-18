@@ -23,7 +23,7 @@
   - Automatically detects your location to send to Open Meteo for location specific forecasts.
 * Real time weather forecast
   - A two week weather forecast with navigatable hourly information for each day.
-* Celsius and Farenheiht converter
+* Celsius and Farenheiht conversion
   
 
 ## Download
